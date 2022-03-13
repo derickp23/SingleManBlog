@@ -1,17 +1,17 @@
 [
     {
         "id": "1",
-        "firstName": "A great relationship is built on the bond you both share, your likes and dislikes and what you both find joy in doing.",
-        "lastName": "Doe"
+        "Tips": "A great relationship is built on the bond you both share, your likes and dislikes and what you both find joy in doing.",
+        "Space": ""
     },
     {
         "id": "2",
-        "firstName": "Relationship is like a rose flower, you water it, care for it and nurture it for it to keep living and blooming.",
-        "lastName": "Peterson"
+        "Tips": "Relationship is like a rose flower, you water it, care for it and nurture it for it to keep living and blooming.",
+        "Space": ""
     },
     {
         "id": "3",
-        "firstName": "Love is like life itself you feed it, care for it and build it, if all this are not done, it gets malnourished, fall sick and die",
-        "lastName": "Hansen"
+        "Tips": "Love is like life itself you feed it, care for it and build it, if all this are not done, it gets malnourished, fall sick and die",
+        "Space": ""
     }
 ]

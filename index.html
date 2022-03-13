@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&amp;display=swap" rel="stylesheet">
   <script src="script.js"></script>
   <script>
-    function Json(){
+    function tip(){
       fetch('advice.json')
           .then(function (response) {
               return response.json();
@@ -23,11 +23,11 @@
               console.log('error: ' + err);
           });
       function appendData(data) {
-          var mainContainer = document.getElementById("myData");
+          var relationshipTips = document.getElementById("myData");
           for (var i = 0; i < data.length; i++) {
-              var div = document.createElement("div");
-              div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
-              mainContainer.appendChild(div);
+            var div = document.createElement("div");
+              div.innerHTML = 'Quotes: ' + data[i].Tips + ' ' + data[i].Space;  
+              relationshipTips.appendChild(div);
           }
       }
     }
@@ -119,7 +119,7 @@
         quoteDiv.innerHTML += '</a>'
       }
     </script>
-<button onclick="Json()">Json Data</button> 
+<button onclick="tip()">Tips</button> 
 <div id="myData"></div>
 
     
