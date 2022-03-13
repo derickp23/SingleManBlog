@@ -6,12 +6,23 @@
     },
     {
         "id": "2",
-        "Tips": "Relationship is like a rose flower, you water it, care for it and nurture it for it to keep living and blooming.",
+        "Tips": "A Relationship is like a rose flower, you water it, care for it and nurture it for it to keep living and blooming.",
         "Space": ""
     },
     {
         "id": "3",
         "Tips": "Love is like life itself you feed it, care for it and build it, if all this are not done, it gets malnourished, fall sick and die",
+        "Space": ""
+    },
+    {
+        "id": "4",
+        "Tips": "It takes two to tango like it takes both sides to keep an healthy relationship going, without both sides involve in trying to work things out, then it’s a dead end",
+        "Space": ""
+    }
+    ,
+    {
+        "id": "5",
+        "Tips": "Someone that truly love and care about you would go miles to see you happy, climb mountains to reach out to you, walk on hot coals just to see you smile.",
         "Space": ""
     }
 ]
