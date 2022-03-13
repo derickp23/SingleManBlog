@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html> 
+<head>
+  <title>Single Man Blog</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&amp;display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+  <script>
+    function Json(){
+      fetch('advice.json')
+          .then(function (response) {
+              return response.json();
+          })
+          .then(function (data) {
+              appendData(data);
+          })
+          .catch(function (err) {
+              console.log('error: ' + err);
+          });
+      function appendData(data) {
+          var mainContainer = document.getElementById("myData");
+          for (var i = 0; i < data.length; i++) {
+              var div = document.createElement("div");
+              div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+              mainContainer.appendChild(div);
+          }
+      }
+    }
+  </script>
+  
+  <script>
+ 
+ function Jokes(){
+    fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
+    .then(res => {
+      if (res.ok){
+        console.log("Success");}
+        else {
+         console.log("Not Successful");
+        }
+        console.log(res.json().then(data=>{
+         let jokes = document.getElementById("jokeresponse")
+         jokes.innerHTML = data.joke}));
+  
+      })
+ }
+    
+  </script>
+<script>
+  var one_day = 1000 * 60 * 60 * 24
+  var today = new Date();
+  var vday = new Date(today.getFullYear(), 2, 14)
+  if (today.getMonth() == 2 && today.getdate() > 14)
+  vday.setFullYear(vday.getFullYear() + 1)
+  var Result = Math.round(vday.getTime() - today.getTime()) / (one_day);
+  var Final_Result = Result.toFixed(0);
+  document.write("Number of days remaining till Valentines Day <br>"
+    + today + "<br> and <br>"
+    + vday + " is: <br> "
+    + Final_Result);
+</script>
+
+</head>
+<body>   
+  <div id="myData"></div>
+   <header>
+     <nav>
+    <div class="topnav">
+        <a href="#relationship">Relationship Quotes</a>
+        <a href="#inspirational">Inspirational Quotes</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="flex-container">
+    <h1>Single Man Blog</h1>
+      <p>Hello world. My name is Derick and this is my blog. I know...another blog just what the world needs, right? I created this blog as a way to let people into my world. I wanna show you my perspective on things and hopefully we can learn and grow together. Let's build a unique space on the web for us to come together and express our experiences. I want this blog to be a place where we dicuss the ups and downs of the relationships in our life. Life's not perfect and everybody needs an outlet to express themselves.</p>
+    </div>
+  <h2 id="relationship">Relationship Quotes</h2>
+  <div class="flex-container">
+      <p>Relationships are very important part of our lives. It's important that we cultivate each important relationship in our lives. Strong relationships play a key role in our continued happiness. Honest and open dialogue can lead to even stronger connections. Being able to express one's self is vital for growth. Relationships are not always easy to talk about and sometimes a complete stranger can provide the perspective we need. This can be a space can even cultivate new relationships as we learn and grow together.</p>
+    </div>
+  <div class="flex-container">
+    <button onclick="hidequotes()"><b>Relationship Quotes</b></button></div>
+    <div id="Relationshipquotes">
+  </div>
+    <script>
+      for (var i = 0, j = 8; i < j; i++){
+        let quoteDiv = document.getElementById("Relationshipquotes")
+        let imageNumber = i + 1
+  
+        quoteDiv.innerHTML += '<a target="_blank" href="RelationshipQuote'+ imageNumber +'.jpg">';
+        quoteDiv.innerHTML += '<img src="images/RelationshipQuote'+ imageNumber + '.jpg" style="width: 300px">'
+        quoteDiv.innerHTML += '</a>'
+      }
+    </script>
+  
+  <h2 id="inspirational">Inspirational Quotes</h2>
+  <div class="flex-container">
+  <p>In order to increase our happiness we need to stay inspired. We most stay motivated and curious about our life experiences. Inspiration is all around us and we must learn to observe it and really appreciate it each and every day. It sounds corny to say but we forget to take time to be inspired everyday. Life gives us something everyday that can inspire us but sometimes we just don't pay attention. We need to stay motivated...stay inspired...enjoy every moment life gives us. </p></div>
+  <div class="flex-container">
+    <button onclick="dropquotes()"><b>Inspirational Quotes</b></button></div>
+    <div id="InspirationalQuote">
+    </div>
+  
+    <script>
+      for (var i = 0, j = 8; i < j; i++){
+        let quoteDiv = document.getElementById("InspirationalQuote")
+        let imageNumber = i + 1
+  
+        quoteDiv.innerHTML += '<a target="_blank" href="InspirationalQuote'+ imageNumber +'.jpg">';
+        quoteDiv.innerHTML += '<img src="images/InspirationalQuote'+ imageNumber + '.jpg" style="width: 300px">'
+        quoteDiv.innerHTML += '</a>'
+      }
+    </script>
+<button onclick="Json()">Json Data</button> 
+<div id="myData"></div>
+
+    
+<button onclick="Jokes()"><b>Joke Generator</b></button>
+<div id="jokeresponse">
+
+
+
+</div>
+  </body>
+  </main>
+
+<footer id="contact">
+  <section class="footer">
+      <a href="mailto:singlemanquotes@yahoo.com" title="Single Man Quotes email address">Contact Us</a>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/singlemanquotes" title="Single Man Quotes Facebook page">Facebook</a>&nbsp;&nbsp;&nbsp; <a href="https://twitter.com/singlemanquotes?lang=en" title=" Single Man Quotes Twitter page">Twitter</a>&nbsp  
+      <p>©Single Man Quotes. All rights reserved.</p>
+       </section>
+         </footer>
+          </html>
+  

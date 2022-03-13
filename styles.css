@@ -1,0 +1,208 @@
+* {box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   list-style: none;    
+   text-decoration: none;     }  
+   
+   #box {
+    cursor: pointer;
+    background: lightseagreen;
+    padding: 40px;
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+    font-weight: bold;}
+   
+button {
+    background-color: rgba(0, 140, 186, 0.5);
+    border-color: rgb(4, 0, 255);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin: 30px;
+    display: inline-block;
+    font-size: 16px;
+    } 
+
+button a:hover {
+      background-color: #ddd;
+      color: rgb(0, 174, 255);
+    } 
+
+.relationship {display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-around;
+    align-content: flex-start;}
+
+.wrapper {width: 400px;
+          max-width: 90%;
+          margin-top: 0;
+          text-align: center;
+          display: block;}  
+          
+.wrapper label{ display: block;
+                margin: 0.5em 0;}   
+                
+.wrapper label input{font-size: 18px;
+                     padding: 0.5em;}    
+                     
+.wrapper input [type="submit"]{font-size: 25px;
+color:blue}                      
+
+header { background-color: darkblue;}  
+
+li {display: inline;
+padding: 5px;
+margin: 15px;}
+
+a {color: white;
+  text-decoration: none;
+                  }     
+
+body {
+  background-image: url("/images/backgroundimage.jpg");
+  background-size:cover;
+  background-color: darkblue;
+  text-align: left;
+  font-family: 'Libre Baskerville', serif, sans-serif;
+  line-height: 1.8;
+  color:white;}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+p {margin: 15px 15px;
+   padding: 20px;      }
+
+img {
+  border-radius: 15px;
+  height: 200px;
+  width: 150px;
+  padding: 5px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+a:link {
+  text-decoration: slateblue;
+  text-decoration: underline;
+  text-decoration: #2f00ff;
+}
+
+a:visited {
+  color: gray;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin: 8px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  margin-top: 200px;
+  padding: 50px;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  display: inline-block;}
+
+
+/* Scroll bar */
+  ul {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+  } 
+
+/* top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color:darkblue;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+
+}
+
+/* topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: gray;
+}
+
+/* CSS paragraph animation */
+p {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count:1;
+  
+}
+@keyframes slidein {
+  from {
+    margin-left: 150%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 150%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* On screens that are 1000px wide or less, flex-containers stack vertically */
+@media screen and (max-width: 1000px) {
+  .flex-container {
+    width: 80%;
+  }
+}
+
+/* Changes background to darkblue at 800px or less */
+@media only screen and (max-width: 800px) {
+  body {
+    background-color: darkblue;}
+}
+
+
+/* If the screen size is 600px wide or less, the sign in form won't display */
+@media screen and (max-width: 600px) {
+  .footer {
+    display: none;
+  }
+}
