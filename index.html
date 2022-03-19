@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&amp;display=swap" rel="stylesheet">
+  <script src="countdown-timer.js"></script>
+  <script src="count_down.js"></script>
   <script src="script.js"></script>
   <script>
     function tip(){
@@ -51,23 +53,11 @@
  }
     
   </script>
-<script>
-  var one_day = 1000 * 60 * 60 * 24
-  var today = new Date();
-  var vday = new Date(today.getFullYear(), 2, 14)
-  if (today.getMonth() == 2 && today.getdate() > 14)
-  vday.setFullYear(vday.getFullYear() + 1)
-  var Result = Math.round(vday.getTime() - today.getTime()) / (one_day);
-  var Final_Result = Result.toFixed(0);
-  document.write("Number of days remaining till Valentines Day <br>"
-    + today + "<br> and <br>"
-    + vday + " is: <br> "
-    + Final_Result);
-</script>
+
 
 </head>
 <body>   
-  <div id="myData"></div>
+
    <header>
      <nav>
     <div class="topnav">
@@ -122,13 +112,8 @@
 <button onclick="tip()">Tips</button> 
 <div id="myData"></div>
 
-    
 <button onclick="Jokes()"><b>Joke Generator</b></button>
 <div id="jokeresponse">
-
-
-
-</div>
   </body>
   </main>
 
