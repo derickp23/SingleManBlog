@@ -11,18 +11,22 @@
   <script src="script.js"></script>
   <script>
 function tip() {
-  //clear div tips html 
-	fetch('advice.json')
-		.then(function(response) {
-			return response.json();
-		})
-		.then(function(data) {
-			appendData(data);
-		})
-
-	//.catch(function(err) {
-	 //console.log('error: ' + err);
-	//});
+        const targetDiv = document.getElementById("myData");
+        const btn = document.getElementById("tipbtn");
+        btn.onclick = function () {
+        if (targetDiv.style.display !== "none") {
+          targetDiv.style.display = "none";
+        } else {
+          targetDiv.style.display = "block";
+        }
+      };
+        fetch('advice.json')
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(data) {
+            appendData(data);
+          })
 }
       function appendData(data) {
           var relationshipTips = document.getElementById("myData");
@@ -88,7 +92,8 @@ function tip() {
 
 
 </head>
-<body>   
+<body>  
+   
 
    <header>
      <nav>
@@ -144,7 +149,7 @@ function tip() {
 <h2 id="Tip of the Day">Tip of the day</h2>
 <p>For a relationship tip of the day hit the button below and a random relationship tip will populate. I hope you find the tips helpful.</p></div>
     <div class="flex-container">
-<button onclick="tip()"><b>Tips</b></button></div> 
+<button id="tipbtn" onclick="tip()"><b>Tips</b></button></div> 
 <div id="myData"></div>
 
 <h2 id="Joke of the day">Joke of the day</h2>
