@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&amp;display=swap" rel="stylesheet">
   <script src="script.js"></script>
   <script>
+    
 function tip() {
         const targetDiv = document.getElementById("myData");
         const btn = document.getElementById("tipbtn");
@@ -19,6 +20,14 @@ function tip() {
         } else {
           targetDiv.style.display = "block";
         }
+        const reloadtButton = document.querySelector("#reload");
+          // Reload everything:
+          function reload() {
+              reload = location.reload();
+          }
+          // Event listeners for reload
+          tipbtn.addEventListener("click", reload, false);
+        
       };
         fetch('advice.json')
           .then(function(response) {
@@ -65,6 +74,7 @@ function tip() {
       }
 
         return array;
+        
     }
     
   
