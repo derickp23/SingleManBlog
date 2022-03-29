@@ -6,7 +6,7 @@ My first feature is "Retrieve data from an external API and display data in your
 
 A second feature is "Read and parse an external file (such as JSON or CSV) into your application and display some data from that in your app". At the bottom of the page you will see the Tips button. On click, the Tips button will display Json data.
 
-A third feature is “Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application”. My Tips button retrieves data from a Json file and randomly displays the Tips/Quotes on button click.  
+A third feature is “Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application”. My Tips button retrieves data from an array in a Json file and randomly displays the Tips/Quotes on button click.  
  
 Enjoy the webpage :) 
 
